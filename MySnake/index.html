@@ -42,24 +42,18 @@
         </section>
         
         <div class="portfolio-item-individual">
-            <p>I used javascript grid, css and html to create a 3 colored coral snake that can eat 3 kinds of food</p>
+            <p>I used javascript for loop to make css grid playground. I put all grids to one array and made another array representing the snake. I made control function for snake direction and hooked it to the arrow keys. Another function was to create snake food. The biggest move function deals with loss scenarios, uses Timeout to move snake, deals with snake eating food and food's effect. I gave snake 3 colors with for function and hooked it to necessary event listeners.</p>
         </div>
         <div class="watermark">
             <img src='snake.png' class="snakeWatermark"></img>
        </div>
         
         <div class="snake-game" id="snake-game">
-            <div class="snakeCol">
+            <div class="snakeIconDiv">
                 <h3 class="snake-header">Snake Game</h3>
-                <a id="start" class="start">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Start/Restart
-                </a>
-                <p class="scoreText">Score: <span id="score">0</span></p>
+                <img src='snake.png' class="snakeIcon"></img>
             </div>
+            
             <div class="rules snakeCol">
                 <div class="instructions-flex">
                     <div class="apple square example"></div>
@@ -72,12 +66,21 @@
                 <div class="instructions-flex">
                     <div class="chillpill square example"></div>
                     <p>Chillpill to calm snake down, no score</p>
-                </div>
-                            
+                </div>        
             </div>
-            <div class="snakeIconDiv">
-                <img src='snake.png' class="snakeIcon"></img>
+            <div class="snakeCol snake-btn">
+                
+                <a id="start" class="start">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Start/Restart
+                </a>
+                <p class="scoreText">Score: <span id="score">0</span></p>
             </div>
+            
+            
             
             <div class="snake-grid"></div>
         </div>            
