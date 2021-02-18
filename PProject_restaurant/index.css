@@ -66,6 +66,7 @@ p,
     width: 100%;
     padding: 0;
     margin: 0;
+    z-index: 99;
 }
 
 .nav-links .link {
@@ -112,6 +113,10 @@ p,
 .navbar a {
     text-decoration: none;
     color: var(--clr-light);      
+}
+
+.nav-open .nav-links a:last-of-type {
+    border-bottom: 1px solid var(--clr-light);
 }
 
 .nav-open .nav-links {
@@ -440,6 +445,7 @@ p,
 .food-pic {
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
+    width: 100%;
 }
 
 .food-text {
@@ -481,6 +487,10 @@ p,
         font-size: var(--fs-body);
     }
 
+    .nav-open .nav-links a:last-of-type {
+        border: none;
+    }
+
     .pic-div {
         background-image: url(Images/beach-restaurant-5218091_1920.jpg);
         background-size: cover;
@@ -498,6 +508,23 @@ p,
 
 @media (min-width: 2000px) {
     :root {
+        --fs-h1: 8rem;
+        --fs-h2: 6rem;
+        --fs-body: 3rem;
+    }
+
+    .body-menu .section .menu-item {
+        max-width: 300px;
+        height: 480px;
+    }
+
+    .navbar {
+        min-height: 158px;
+    }
+}
+
+@media (min-width: 3000px) {
+    :root {
         --fs-h1: 12rem;
         --fs-h2: 8rem;
         --fs-body: 4rem;
@@ -505,6 +532,10 @@ p,
 
     .body-menu .section .menu-item {
         max-width: 350px;
-        height: 550px;
+        height: 600px;
+    }
+
+    .navbar {
+        min-height: 208px;
     }
 }
