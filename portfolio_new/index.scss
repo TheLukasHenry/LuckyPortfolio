@@ -113,7 +113,16 @@ footer {
         margin: 0.5em;
         color: $light;
         text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
         // max-width: 200px;
+        &:hover,
+        &:focus {
+            transform: scale(1.1);
+            opacity: 0.8;
+            transition: 0.2s;
+        }
     }
 }
 
@@ -137,7 +146,7 @@ footer {
     // overflow: hidden;
 }
 
-.container {
+.arrows {
  display: flex;
  justify-content: center;
  align-items: center;
@@ -151,18 +160,31 @@ footer {
 
     // translate(20px);
     // translate: (-35px);
+
+    &:hover{
+        cursor: pointer;
+
+        .chevron {
+            width: $base * 4.5;
+            height: $base * 1;
+            transition: 0.2s;
+
+        }
+    }
+    
+    
 }
 
-.container:nth-child(1) {
+.arrows:nth-child(1) {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     left: calc(50% - 100px);
+    transform: rotate(+90deg);
     // top: -65px;
     // width: 50px;
     // height: 150px;
-    transform: rotate(+90deg);
        // translate(20px);
        // translate: (-35px);
    }
