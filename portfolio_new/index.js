@@ -2,7 +2,6 @@ const arrows = document.querySelectorAll('#arrows')
 const card = document.querySelector('#card')
 
 // Card project switching
-// const Projects = [`{}`, `{}`, `{}`, `{}`]
 const Projects = [` <h2 class="card__title" id="card__title">Paradays</h2>
 <p class="card__description" id="card__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem expedita quisquam tempore sequi minima assumenda, magni fuga quasi animi impedit?</p>
 <a class="card__btn" id="card__btn" href="https://github.com/Lherajt/LuckyPortfolio/tree/master/Lucky_portfolio/PProject_restaurant" target="_blank">Code</a>
@@ -24,29 +23,29 @@ const Projects = [` <h2 class="card__title" id="card__title">Paradays</h2>
  <a class="card__btn" id="card__btn" href="../MySnake/index.html" target="_blank">View</a>`]
 
 
-// arrows.forEach(arrow => {
-//     arrow.addEventListener('click', () => {
-//         card.innerHTML = `
-        
-//         <h2 class="card__title" id="card__title">Paradays</h2>
-//         <p class="card__description" id="card__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem expedita quisquam tempore sequi minima assumenda, magni fuga quasi animi impedit?</p>
-//         <a class="card__btn" id="card__btn" href="https://github.com/Lherajt/LuckyPortfolio/tree/master/Lucky_portfolio/PProject_restaurant" target="_blank">Code</a>
-//         <a class="card__btn" id="card__btn" href="../PProject_restaurant/index.html" target="_blank">View</a>
-    
-//         `
-//     })
-// })
 
-arrows.forEach(arrow => {
-    let i = 0
-    arrow.addEventListener('click', () => {
-        card.innerHTML = `
-        ${Projects[i]}
-        `
-        i++
-    })
+
+
+// making arrows loop over projects
+
+let i = 0
+arrows[1].addEventListener('click', () => {
+    i > 3 ? i = 0 : i < 0 ? i = 3 : ''
+    card.innerHTML = `
+    ${Projects[i]}
+    `
+    i++
 })
+arrows[0].addEventListener('click', () => {
+    i > 3 ? i = 0 : i < 0 ? i = 3 : ''
+    card.innerHTML = `
+    ${Projects[i]}
+    `
+    i--
+})
+card.innerHTML = `
+    ${Projects[i]}
+    `
 
 
-
-console.log({arrows});
+// console.log({arrows});
