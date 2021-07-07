@@ -37,6 +37,7 @@ body {
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: #032C01;
     color: $light;
     text-align: center;
     font-family: $ff-1;
@@ -123,10 +124,12 @@ footer {
 }
 
 .title {
-    margin: 3em 0 1em 0;
+    margin: 3em auto 1em auto;
     font-size: $fs-h2;
     animation: 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     overflow: hidden;
+    max-width: 500px;
+    // align-self: center;
 }
 
 .header {
@@ -351,14 +354,16 @@ footer {
     width: 70px;
     letter-spacing: 1px;
   
-    &:hover {
+    &:hover
+    &:active {
       background: $light;
       border-color: $accent;
       color: $light;
       width: 190px;
       height: 45px;
     }
-    &:hover .contact__icons {
+    &:hover .contact__icons
+    &:active .contact__icons{
         &__icon{
 
             transform: translateY(-75%);
