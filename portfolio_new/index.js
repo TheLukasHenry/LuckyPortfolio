@@ -63,8 +63,8 @@ projectBtn.addEventListener('click', () => {
     title.style.display = "none"
     projectBtn.style.display = "none"
     backBtn.style.display = "inline"
-    contact.style.marginTop = "2em"
-    contact.style.marginBottom = "1em"
+    // contact.style.marginTop = "2em"
+    // contact.style.marginBottom = "1em"
     // resume.style.marginTop = "3em"
 })
 
@@ -75,7 +75,7 @@ backBtn.addEventListener('click', () => {
     // title.style.paddingTop = "6em"
     backBtn.style.display = "none"
     projectBtn.style.display = "inline"
-    contact.style.marginTop = "1em"
-    contact.style.marginBottom = "0"
+    // contact.style.marginTop = "1em"
+    // contact.style.marginBottom = "0"
 })
 
