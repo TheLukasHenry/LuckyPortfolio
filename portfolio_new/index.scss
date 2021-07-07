@@ -2,7 +2,7 @@
 
 $base: 0.4rem;
 $dark1: hsl(120, 100%, 10%);
-$dark2: hsla(120, 100%, 11%, 0.8);
+$dark2: hsla(120, 100%, 30%);
 $light: hsl(0, 0%, 100%);
 $accent: hsl(120, 100%, 72%);
 $fs-body: 1rem;
@@ -58,6 +58,7 @@ body {
 .navbar{
     @include navFooter;
     top: 0;
+    z-index: 1;
 
     .navbar__logo img {
         max-height: 55px;
@@ -119,6 +120,7 @@ footer {
 
 .header {
     margin-top: 4em;
+    margin-bottom: 60px;
 }
 
 .title {
@@ -129,7 +131,11 @@ footer {
 }
 
 .about-title {
-    margin: 2em 0;
+    margin: 2em 0 1em 0;
+}
+
+.about-header {
+    margin-top: 1em;
 }
 
 .about__body p {
@@ -161,6 +167,8 @@ footer {
     align-items: center;
     background-color: rgba(0, 36, 0, 0.575);
     padding: 1em;
+    max-width: 500px;
+    margin: 0 auto;
     // animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     // opacity: 0.7;
     // & * {
@@ -204,10 +212,12 @@ footer {
     display: none;
     position: relative;
     background-color: hsla(118, 100%, 5%, 0.534);
-    max-width: 300px;
+    height: 30px;
+    max-width: 532px;
+    // width: MinMax(75px, 50%, 250px);
     // align-self: center;
     // text-align: center;
-    margin: 6em auto 0.5em auto;
+    margin: 6em auto 0 auto;
     // padding: 0.2em 0;
     // overflow: hidden;
 }
@@ -224,7 +234,7 @@ footer {
  right: calc(50% - 100px);
  top: -55px;
  width: 30px;
- height: 130px;
+ height: 138px;
  transform: rotate(-90deg);
 //  overflow-x: none;
 
@@ -436,7 +446,6 @@ footer {
     font-weight: 400;
     transition: 200ms ease-in-out;
     &:hover {
-        color: $dark2;
         background: $light;
     }
 }
@@ -451,65 +460,3 @@ footer {
 
 
 
-
-
-// .social-list__link {  
-//     display: inline-flex;
-//     font-size: 3rem;  
-//     text-decoration: none;  
-//     color: var(--color-icon);
-//     width: 6rem;
-//     height: 6rem;   
-//     transition: .5s linear;
-//     position: relative;
-//     z-index: 1;
-//     margin: auto
-//   }
-  
-//   .social-list__link:hover {
-//     color: #fff;
-//   }
-  
-//   .social-list__link i {
-//     margin: auto;    
-//   }
-  
-//   .social-list__link::before {  
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     width: 6rem;
-//     height: 6rem;
-//     background: #000;
-//     border-radius: 50%;
-//     z-index: -1;
-//     transform: scale(0);
-//     transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
-//   }
-    
-//   .social-list__link:hover::before {  
-//     transform: scale(1);
-//   }
-  
-//   .social-list__item:nth-child(1) a:hover:before { 
-//     background: var(--social-icon1); 
-//   }
-  
-//   .social-list__item:nth-child(2) a:hover:before { 
-//     background: var(--social-icon2); 
-//   }
-  
-//   .social-list__item:nth-child(3) a:hover:before { 
-//     background: var(--social-icon3); 
-//   }
-  
-//   .social-list__item:nth-child(4) a:hover:before { 
-//     background: var(--social-icon4); 
-//   }
-  
-//   .social-list__item:nth-child(5) a:hover:before { 
-//     background: var(--social-icon5); 
-//   }
