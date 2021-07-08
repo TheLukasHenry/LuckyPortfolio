@@ -14,6 +14,7 @@ const section1 = document.querySelector('#section-1')
 const section2 = document.querySelector('#section-2')
 const section3 = document.querySelector('#section-3')
 const section4 = document.querySelector('#section-4')
+// const menuItem = document.querySelector('#menu-item')
 // const outsideNav = document.querySelectorAll('body:not(.navbar)')
 
 // Opening and closing the navbar
@@ -52,6 +53,8 @@ document.querySelector('#contact').addEventListener('click', () => {
     }, 1100)
     
 })
+
+
 
 // Menu sections opening and closing
 if (choice1){

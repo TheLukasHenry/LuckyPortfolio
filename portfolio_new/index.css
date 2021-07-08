@@ -1,3 +1,9 @@
+@media (min-width: 500px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
 html,
 body {
   padding: 0;
@@ -8,7 +14,7 @@ body {
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #032C01;
+  background-color: #032c01;
   color: white;
   text-align: center;
   font-family: Roboto;
@@ -48,7 +54,7 @@ body {
 }
 
 .navbar .navbar__logo img:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .navbar .navbar__list {
@@ -67,7 +73,7 @@ body {
 }
 
 .navbar .navbar__list *:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 footer {
@@ -211,7 +217,7 @@ footer .social-list .social-list__item {
   background-color: rgba(1, 26, 0, 0.534);
   height: 30px;
   max-width: 532px;
-  margin: 6em auto 0 auto;
+  margin: 7em auto 0 auto;
 }
 
 .work-pagination__title {
@@ -249,15 +255,15 @@ footer .social-list .social-list__item {
 }
 
 .arrows:nth-child(1) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   left: calc(50% - 100px);
   -webkit-transform: rotate(90deg);
@@ -287,7 +293,7 @@ footer .social-list .social-list__item {
 
 .chevron:before,
 .chevron:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   height: 100%;
@@ -371,7 +377,7 @@ footer .social-list .social-list__item {
   letter-spacing: 1px;
 }
 
-.contact:hover .contact:active {
+.contact:hover, .contact:active {
   background: white;
   border-color: #70ff70;
   color: white;
@@ -379,7 +385,7 @@ footer .social-list .social-list__item {
   height: 45px;
 }
 
-.contact:hover .contact__icons
+.contact:hover .contact__icons__icon,
 .contact:active .contact__icons__icon {
   -webkit-transform: translateY(-75%);
           transform: translateY(-75%);
@@ -387,31 +393,31 @@ footer .social-list .social-list__item {
   transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.contact:hover .contact__icons
+.contact:hover .contact__icons__icon:nth-child(1),
 .contact:active .contact__icons__icon:nth-child(1) {
   -webkit-transition-delay: 30ms;
           transition-delay: 30ms;
 }
 
-.contact:hover .contact__icons
+.contact:hover .contact__icons__icon:nth-child(2),
 .contact:active .contact__icons__icon:nth-child(2) {
   -webkit-transition-delay: 60ms;
           transition-delay: 60ms;
 }
 
-.contact:hover .contact__icons
+.contact:hover .contact__icons__icon:nth-child(3),
 .contact:active .contact__icons__icon:nth-child(3) {
   -webkit-transition-delay: 90ms;
           transition-delay: 90ms;
 }
 
-.contact:hover .contact__icons
+.contact:hover .contact__icons__icon:nth-child(4),
 .contact:active .contact__icons__icon:nth-child(4) {
   -webkit-transition-delay: 120ms;
           transition-delay: 120ms;
 }
 
-.contact:hover .contact__icons
+.contact:hover .contact__icons__icon:nth-child(5),
 .contact:active .contact__icons__icon:nth-child(5) {
   -webkit-transition-delay: 150ms;
           transition-delay: 150ms;

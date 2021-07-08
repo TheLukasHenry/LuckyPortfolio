@@ -18,7 +18,7 @@ const Projects = [ `<h2 class="card__title" id="card__title">Sports Search API</
 <a class="card__btn" id="card__btn" href="./sportsAPI/index.html" target="_blank">View</a>`,
 
 ` <h2 class="card__title" id="card__title">Paradays</h2>
-<p class="card__description" id="card__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem expedita quisquam tempore sequi minima assumenda, magni fuga quasi animi impedit?</p>
+<p class="card__description" id="card__description">Landing page for an imaginary restaurant. I wrote the HTML skeleton for the landing page, form and menu. Styling the page with CSS was the next step. I used JS to open and close navigation menu and switch between menu sections.</p>
 <a class="card__btn" id="card__btn" href="https://github.com/Lherajt/LuckyPortfolio/tree/master/Lucky_portfolio/PProject_restaurant" target="_blank">Code</a>
 <a class="card__btn" id="card__btn" href="./PProject_restaurant/index.html" target="_blank">View</a>`,
 
@@ -28,7 +28,6 @@ const Projects = [ `<h2 class="card__title" id="card__title">Sports Search API</
  <a class="card__btn" id="card__btn" href="./MySnake/index.html" target="_blank">View</a>`,
  
  `<h2 class="card__title" id="card__title">Resume</h2>
- <p class="card__description" id="card__description">good lorem344444444444333333Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem</p>
  <a class="card__btn" id="card__btn" href="./img/Lucky-resume.pdf" target="_blank">View</a>`]
 
 
@@ -63,19 +62,14 @@ projectBtn.addEventListener('click', () => {
     title.style.display = "none"
     projectBtn.style.display = "none"
     backBtn.style.display = "inline"
-    // contact.style.marginTop = "2em"
-    // contact.style.marginBottom = "1em"
-    // resume.style.marginTop = "3em"
+
 })
 
 backBtn.addEventListener('click', () => {
     projectPagination.style.display = "none"
     card.style.display = "none"
     title.style.display = "block"
-    // title.style.paddingTop = "6em"
     backBtn.style.display = "none"
     projectBtn.style.display = "inline"
-    // contact.style.marginTop = "1em"
-    // contact.style.marginBottom = "0"
 })
 

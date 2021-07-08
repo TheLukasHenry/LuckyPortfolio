@@ -460,6 +460,22 @@ p,
     transition: all 0.3s ease-in-out;
 }
 
+.menu-item__description {
+    display: none;
+}
+
+.open .menu-item:hover .food-pic,
+.open .menu-item:focus .food-pic {
+    display: none;
+}
+
+.open .menu-item:hover .menu-item__description,
+.open .menu-item:focus .menu-item__description {
+    display: inline-block;
+    padding: 1em;
+    transition: all 0.3s ease-in-out;
+}
+
 /* Media queries */
 @media (min-width: 800px) {
     :root {
