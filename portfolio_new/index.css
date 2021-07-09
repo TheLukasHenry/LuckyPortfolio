@@ -1,6 +1,36 @@
-@media (min-width: 500px) {
-  .title {
+:root {
+  font-size: 1rem;
+}
+
+:root h2 {
+  font-size: 1.6rem;
+}
+
+:root h1 {
+  font-size: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 1.2rem;
+  }
+  :root h2 {
+    font-size: 1.9rem;
+  }
+  :root h1 {
     font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    font-size: 1.4rem;
+  }
+  :root h2 {
+    font-size: 2.2rem;
+  }
+  :root h1 {
+    font-size: 3.5rem;
   }
 }
 
@@ -135,12 +165,25 @@ footer .social-list .social-list__item {
 }
 
 .title {
-  margin: 3em auto 1em auto;
-  font-size: 2.5rem;
+  margin: 2.5em auto 1em auto;
   -webkit-animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
           animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   overflow: hidden;
-  max-width: 500px;
+  max-width: 480px;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    margin: 1em auto 0.8em auto;
+    max-width: 600px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .title {
+    margin: 1em auto 0.7em auto;
+    max-width: 800px;
+  }
 }
 
 .header {
