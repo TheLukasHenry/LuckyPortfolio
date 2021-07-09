@@ -3,11 +3,11 @@
 }
 
 :root h2 {
-  font-size: 1.6rem;
+  font-size: 2.5rem;
 }
 
 :root h1 {
-  font-size: 2.5rem;
+  font-size: 5.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -15,10 +15,10 @@
     font-size: 1.2rem;
   }
   :root h2 {
-    font-size: 1.9rem;
+    font-size: 3rem;
   }
   :root h1 {
-    font-size: 3rem;
+    font-size: 9rem;
   }
 }
 
@@ -27,10 +27,10 @@
     font-size: 1.4rem;
   }
   :root h2 {
-    font-size: 2.2rem;
+    font-size: 3.6rem;
   }
   :root h1 {
-    font-size: 3.5rem;
+    font-size: 11rem;
   }
 }
 
@@ -160,34 +160,100 @@ footer .social-list .social-list__item {
   padding: 0.3em;
 }
 
-.header {
+header {
   margin-bottom: 5em;
+  margin-top: 1em;
 }
 
 .title {
-  margin: 2.5em auto 1em auto;
-  -webkit-animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-          animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+  -ms-grid-columns: auto auto;
+      grid-template: auto auto / auto auto;
+      grid-template-areas: 'aka .' 'title title' 'desc .' 'welcome welcome';
+  margin: 5em auto 1em auto;
   overflow: hidden;
-  max-width: 480px;
+  width: 270px;
 }
 
 @media screen and (min-width: 768px) {
   .title {
     margin: 1em auto 0.8em auto;
-    max-width: 600px;
+    width: 520px;
+        grid-template-areas: 'title title' 'aka desc' 'welcome welcome';
   }
 }
 
 @media screen and (min-width: 1024px) {
   .title {
     margin: 1em auto 0.7em auto;
-    max-width: 800px;
+    width: 740px;
   }
 }
 
-.header {
-  margin-top: 1em;
+.title__h1 {
+  margin: 0;
+  font-family: 'Fredericka the Great', cursive;
+  -webkit-animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+          animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: title;
+  letter-spacing: 2px;
+}
+
+.title__aka {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: aka;
+  margin: 0 auto 0 0;
+  color: white;
+  -webkit-animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+          animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  -webkit-animation-delay: 0.5s !important;
+          animation-delay: 0.5s !important;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+@media screen and (min-width: 768px) {
+  .title__aka {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+}
+
+.title__description {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: desc;
+  margin: 0;
+  text-align: left;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  -webkit-animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+          animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  -webkit-animation-delay: 0.6s !important;
+          animation-delay: 0.6s !important;
+}
+
+@media screen and (min-width: 768px) {
+  .title__description {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+}
+
+.title__welcome {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: welcome;
+  margin: 0.5em 0 0 0;
+  -webkit-animation-delay: 1.5s !important;
+          animation-delay: 1.5s !important;
 }
 
 .about__body {
@@ -261,10 +327,6 @@ footer .social-list .social-list__item {
   height: 30px;
   max-width: 532px;
   margin: 7em auto 0 auto;
-}
-
-.work-pagination__title {
-  margin: 0;
 }
 
 .arrows {
@@ -402,7 +464,7 @@ footer .social-list .social-list__item {
 .contact {
   all: unset;
   background: #70ff70;
-  border: 2px solid #70ff70;
+  border: 2px solid white;
   color: #003300;
   font-size: 1rem;
   position: absolute;
@@ -422,7 +484,7 @@ footer .social-list .social-list__item {
 
 .contact:hover, .contact:active {
   background: white;
-  border-color: #70ff70;
+  border-top: solid 1px black;
   color: white;
   width: 190px;
   height: 45px;
@@ -531,7 +593,7 @@ footer .social-list .social-list__item {
   padding: 0.5em 1em;
   cursor: pointer;
   color: #003300;
-  border: 2px solid #70ff70;
+  border: 2px solid white;
   font-weight: 400;
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
@@ -544,13 +606,21 @@ footer .social-list .social-list__item {
   background: white;
 }
 
+.projects-btn {
+  margin-bottom: 2em;
+}
+
+.resume,
+.projects-btn {
+  font-size: 1.3rem;
+}
+
 .back-btn {
   display: none;
   position: absolute;
   top: 60px;
   left: 0;
   margin: 0;
-  border: 2px solid #70ff70;
 }
 
 .about__back-btn {

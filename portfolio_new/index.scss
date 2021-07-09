@@ -8,16 +8,19 @@ $accent: hsl(120, 100%, 72%);
 
 
 $fs-body: 1rem;
-$fs-h2: 1.6rem;
-$fs-h1: 2.5rem;
+$fs-h3: 1.6rem;
+$fs-h2: 2.5rem;
+$fs-h1: 5.5rem;
 
 $fs-body-medium: 1.2rem;
-$fs-h2-medium: 1.9rem;
-$fs-h1-medium: 3rem;
+$fs-h3-medium: 1.9rem;
+$fs-h2-medium: 3rem;
+$fs-h1-medium: 9rem;
 
 $fs-body-wide: 1.4rem;
-$fs-h2-wide: 2.2rem;
-$fs-h1-wide: 3.5rem;
+$fs-h3-wide: 2.2rem;
+$fs-h2-wide: 3.6rem;
+$fs-h1-wide: 11rem;
 
 :root {
   font-size: $fs-body;
@@ -26,6 +29,7 @@ $fs-h1-wide: 3.5rem;
   }
   h1 {
     font-size: $fs-h1;
+    // font-weight: 1600;
   }
   @media screen and (min-width: 768px) {
     font-size: $fs-body-medium;
@@ -173,29 +177,109 @@ footer {
   }
 }
 
-.header {
+header {
   margin-bottom: 5em;
+  margin-top: 1em;
 }
 
+// .title {
+//   margin: 2.5em auto 1em auto;
+//   animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+//   overflow: hidden;
+//   max-width: 480px;
+//   @media screen and (min-width: 768px) {
+//     margin: 1em auto 0.8em auto;
+//     max-width: 600px;
+//   }
+//   @media screen and (min-width: 1024px) {
+//     margin: 1em auto 0.7em auto;
+//     max-width: 800px;
+//   }
+// }
+
 .title {
-  margin: 2.5em auto 1em auto;
-  // font-size: $fs-h2;
-  animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  // position: relative;
+  display: grid;
+  grid-template: auto auto / auto auto;
+  grid-template-areas:  'aka .'
+                        'title title'
+                        'desc .'
+                        'welcome welcome';
+  margin: 5em auto 1em auto;
+  // animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   overflow: hidden;
-  max-width: 480px;
-  // align-self: center;
+  width: 270px;
+  // max-width: 480px;
   @media screen and (min-width: 768px) {
     margin: 1em auto 0.8em auto;
-    max-width: 600px;
+    width: 520px;
+    grid-template-areas:
+                        'title title'
+                        'aka desc'
+                        'welcome welcome';
   }
   @media screen and (min-width: 1024px) {
     margin: 1em auto 0.7em auto;
-    max-width: 800px;
+    width: 740px;
   }
 }
 
-.header {
-  margin-top: 1em;
+.title__h1 {
+  // display: grid;
+  margin: 0;
+  font-family: 'Fredericka the Great', cursive;
+  animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  // color: rgb(186,255,179);
+  // background: linear-gradient(90deg, rgb(216, 252, 212) 24%, rgb(250, 252, 211) 75%, rgb(206, 233, 248) 100%); 
+  // background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  // -webkit-text-stroke-width: 1px;
+  // -webkit-text-stroke-color: rgb(255, 255, 255);
+  // text-shadow: 0 0 10px transparent;
+  // background-clip: text;
+  // text: transparent;
+  // grid-column: -1 / 1;
+  grid-area: title;
+  // min-width: 100%;
+  letter-spacing: 2px;
+}
+
+// .title__aka,
+// .title__description {
+//   display: inline-flex;
+// }
+
+.title__aka {
+  grid-area: aka;
+  margin: 0 auto 0 0;
+  color: white;
+  animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation-delay: 0.5s !important;
+  transform: translateY(20px);
+  @media screen and (min-width: 768px) {
+    transform: translateY(-40px);
+  }
+  // @media screen and (min-width: 768px) {
+  //   transform: translateY(-40px);
+  // }
+
+}
+.title__description {
+  grid-area: desc;
+  margin: 0;
+  text-align: left;
+  transform: translateY(-20px);
+  animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation-delay: 0.6s !important;
+  @media screen and (min-width: 768px) {
+    transform: translateY(-40px);
+  }
+}
+
+.title__welcome {
+  grid-area: welcome;
+  margin: 0.5em 0 0 0;
+  animation-delay: 1.5s !important;
 }
 
 .about__body {
@@ -251,9 +335,9 @@ footer {
   margin: 7em auto 0 auto;
 }
 
-.work-pagination__title {
-  margin: 0;
-}
+// .work-pagination__title {
+//   margin: 0;
+// }
 
 .arrows {
   display: flex;
@@ -345,7 +429,7 @@ footer {
 .contact {
   all: unset;
   background: $accent;
-  border: 2px solid $accent;
+  border: 2px solid $light;
   color: $dark1;
   font-size: $fs-body;
   position: absolute;
@@ -364,7 +448,7 @@ footer {
   &:hover,
   &:active {
     background: $light;
-    border-color: $accent;
+    border-top: solid 1px black;
     color: $light;
     width: 190px;
     height: 45px;
@@ -444,12 +528,21 @@ footer {
   cursor: pointer;
   color: $dark1;
   // text-transform: uppercase;
-  border: 2px solid $accent;
+  border: 2px solid $light;
   font-weight: 400;
   transition: 200ms ease-in-out;
   &:hover {
     background: $light;
   }
+}
+
+.projects-btn {
+  margin-bottom: 2em;
+}
+
+.resume,
+.projects-btn {
+  font-size: 1.3rem;
 }
 
 .back-btn {
@@ -458,7 +551,7 @@ footer {
   top: 60px;
   left: 0;
   margin: 0;
-  border: 2px solid $accent;
+  // border: 2px solid $accent;
 }
 
 .about__back-btn {
