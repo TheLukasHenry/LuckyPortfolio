@@ -15,7 +15,7 @@ const about = document.querySelector('#about')
 const Projects = [ `<h2 class="card__title" id="card__title">Sports Search API</h2>
 <p class="card__description" id="card__description">I enjoy sports so making the sports API project was fun. I got access to the thesportsdb.com API with the API key to get the data. Originally I made 4 async-await functions which were getting data and displaying it in the DOM. Those were for the athlete card, league highlights, sports highlights and scores. I made the functions into one big function after making them work. Styling the page was the next step and I used the VanillaTilt.js to add the cool glare effect to bigger screens.</p>
 <a class="card__btn" id="card__btn" href="https://github.com/Lherajt/LuckyPortfolio/tree/master/Lucky_portfolio/sportsAPI" target="_blank">Code</a>
-<a class="card__btn" id="card__btn" href="./sportsAPI/index.html" target="_blank">View</a>`,
+<a class="card__btn" id="card__btn" href="sportsAPI/index.html" target="_blank">View</a>`,
 
 ` <h2 class="card__title" id="card__title">Paradays</h2>
 <p class="card__description" id="card__description">Landing page for an imaginary restaurant. I wrote the HTML skeleton for the landing page, form and menu. Styling the page with CSS was the next step. I used JS to open and close navigation menu and switch between menu sections.</p>
