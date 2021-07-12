@@ -24,7 +24,7 @@ const Projects = [ `<h2 class="card__title" id="card__title">Sports Search API</
 
  `<h2 class="card__title" id="card__title">Coral Snake</h2>
  <p class="card__description" id="card__description">I used for loop to make css grid playground. I put all grids to one array and made another array representing snake. Control function directs snake from grid to grid. The biggest function is "move" which starts and restarts the game, uses Timeout interval to move snake, deals with snake eating food and makes snake black yellow and red.</p>
- <a class="card__btn" id="card__btn" href="https://github.com/Lherajt/LuckyPortfolio/tree/gh-pages/portfolio_new/MySnake" target="_blank">Code</a>
+ <a class="card__btn" id="card__btn" href="https://github.com/Lherajt/LuckyPortfolio/tree/gh-pages/MySnake" target="_blank">Code</a>
  <a class="card__btn" id="card__btn" href="./MySnake/index.html" target="_blank">View</a>`,
  
  `<h2 class="card__title" id="card__title">Resume</h2>
