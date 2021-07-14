@@ -51,6 +51,11 @@ body {
   min-height: 100vh;
 }
 
+html * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   padding: 1em;
 }
@@ -306,8 +311,8 @@ header {
       -ms-flex-align: center;
           align-items: center;
   background-color: rgba(0, 36, 0, 0.575);
-  padding: 1em;
-  max-width: 500px;
+  padding: 16px;
+  width: 532px;
   margin: 0 auto 2em auto;
 }
 
@@ -482,7 +487,7 @@ header {
   letter-spacing: 1px;
 }
 
-.contact:hover, .contact:active {
+.contact:hover, .contact:active, .contact:focus {
   background: white;
   border-top: solid 1px black;
   color: white;
@@ -491,7 +496,8 @@ header {
 }
 
 .contact:hover .contact__icons__icon,
-.contact:active .contact__icons__icon {
+.contact:active .contact__icons__icon,
+.contact:focus .contact__icons__icon {
   -webkit-transform: translateY(-75%);
           transform: translateY(-75%);
   -webkit-transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -499,31 +505,36 @@ header {
 }
 
 .contact:hover .contact__icons__icon:nth-child(1),
-.contact:active .contact__icons__icon:nth-child(1) {
+.contact:active .contact__icons__icon:nth-child(1),
+.contact:focus .contact__icons__icon:nth-child(1) {
   -webkit-transition-delay: 30ms;
           transition-delay: 30ms;
 }
 
 .contact:hover .contact__icons__icon:nth-child(2),
-.contact:active .contact__icons__icon:nth-child(2) {
+.contact:active .contact__icons__icon:nth-child(2),
+.contact:focus .contact__icons__icon:nth-child(2) {
   -webkit-transition-delay: 60ms;
           transition-delay: 60ms;
 }
 
 .contact:hover .contact__icons__icon:nth-child(3),
-.contact:active .contact__icons__icon:nth-child(3) {
+.contact:active .contact__icons__icon:nth-child(3),
+.contact:focus .contact__icons__icon:nth-child(3) {
   -webkit-transition-delay: 90ms;
           transition-delay: 90ms;
 }
 
 .contact:hover .contact__icons__icon:nth-child(4),
-.contact:active .contact__icons__icon:nth-child(4) {
+.contact:active .contact__icons__icon:nth-child(4),
+.contact:focus .contact__icons__icon:nth-child(4) {
   -webkit-transition-delay: 120ms;
           transition-delay: 120ms;
 }
 
 .contact:hover .contact__icons__icon:nth-child(5),
-.contact:active .contact__icons__icon:nth-child(5) {
+.contact:active .contact__icons__icon:nth-child(5),
+.contact:focus .contact__icons__icon:nth-child(5) {
   -webkit-transition-delay: 150ms;
           transition-delay: 150ms;
 }
