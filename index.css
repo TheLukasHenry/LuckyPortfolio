@@ -2,6 +2,10 @@
   font-size: 1rem;
 }
 
+:root h3 {
+  font-size: 1.6rem;
+}
+
 :root h2 {
   font-size: 2.5rem;
 }
@@ -13,6 +17,9 @@
 @media screen and (min-width: 768px) {
   :root {
     font-size: 1.2rem;
+  }
+  :root h3 {
+    font-size: 1.9rem;
   }
   :root h2 {
     font-size: 3rem;
@@ -26,11 +33,29 @@
   :root {
     font-size: 1.4rem;
   }
+  :root h3 {
+    font-size: 2.2rem;
+  }
   :root h2 {
     font-size: 3.6rem;
   }
   :root h1 {
     font-size: 11rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  :root {
+    font-size: 2rem;
+  }
+  :root h3 {
+    font-size: 2.8rem;
+  }
+  :root h2 {
+    font-size: 4.4rem;
+  }
+  :root h1 {
+    font-size: 15rem;
   }
 }
 
@@ -83,9 +108,21 @@ body {
   z-index: 1;
 }
 
+@media screen and (min-width: 1800px) {
+  .navbar {
+    max-height: 100px;
+  }
+}
+
 .navbar .navbar__logo img {
   max-height: 55px;
   padding-left: 0.3em;
+}
+
+@media screen and (min-width: 1800px) {
+  .navbar .navbar__logo img {
+    max-height: 100px;
+  }
 }
 
 .navbar .navbar__logo img:hover {
@@ -132,6 +169,12 @@ footer {
   padding: 0 0.5em;
   bottom: 0;
   max-width: 100vw;
+}
+
+@media screen and (min-width: 1800px) {
+  footer {
+    max-height: 100px;
+  }
 }
 
 footer .footer__link {
@@ -184,7 +227,7 @@ header {
 
 @media screen and (min-width: 768px) {
   .title {
-    margin: 1em auto 0.8em auto;
+    margin: 2em auto 0.8em auto;
     width: 520px;
         grid-template-areas: 'title title' 'aka desc' 'welcome welcome';
   }
@@ -194,6 +237,29 @@ header {
   .title {
     margin: 1em auto 0.7em auto;
     width: 740px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .title {
+    margin: 1em auto 0.7em auto;
+    width: 1400px;
+  }
+}
+
+.about-title {
+  margin-top: 1em !important;
+}
+
+@media screen and (min-width: 768px) {
+  .about-title {
+    margin-top: 0.4em !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about-title {
+    margin-top: 0.2em !important;
   }
 }
 
@@ -230,6 +296,20 @@ header {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .title__aka {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .title__aka {
+    -webkit-transform: translateY(-90px);
+            transform: translateY(-90px);
+  }
+}
+
 .title__description {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -251,6 +331,20 @@ header {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .title__description {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .title__description {
+    -webkit-transform: translateY(-90px);
+            transform: translateY(-90px);
+  }
+}
+
 .title__welcome {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
@@ -261,13 +355,64 @@ header {
           animation-delay: 1.5s !important;
 }
 
-.about__body {
-  margin-bottom: 2em;
+.about-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 2em auto;
 }
 
-.about__body p {
-  max-width: 75ch;
-  margin: 1em auto;
+@media screen and (min-width: 768px) {
+  .about-body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 4em;
+  }
+}
+
+.profile-picture {
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .profile-picture {
+    width: 45vw;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .profile-picture {
+    width: 47vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-body__description {
+    width: 45vw;
+    line-height: 1.3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about-body__description {
+    width: 47vw;
+    line-height: 1.6em;
+  }
 }
 
 .text-focus-in {
@@ -312,7 +457,8 @@ header {
           align-items: center;
   background-color: rgba(0, 36, 0, 0.575);
   padding: 16px;
-  width: 532px;
+  width: Calc(100vw-padding);
+  max-width: 532px;
   margin: 0 auto 2em auto;
 }
 
@@ -321,8 +467,10 @@ header {
           animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
-.card .card__description {
-  max-width: 75ch;
+@media screen and (min-width: 1800px) {
+  .card {
+    max-width: 900px;
+  }
 }
 
 .work-pagination {
@@ -332,6 +480,12 @@ header {
   height: 30px;
   max-width: 532px;
   margin: 7em auto 0 auto;
+}
+
+@media screen and (min-width: 1800px) {
+  .work-pagination {
+    max-width: 900px;
+  }
 }
 
 .arrows {
@@ -487,6 +641,18 @@ header {
   letter-spacing: 1px;
 }
 
+@media screen and (min-width: 1024px) {
+  .contact {
+    padding: 0.5em 1.5em 0.5em 1em;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .contact {
+    padding: 0.5em 2.5em 0.5em 1em;
+  }
+}
+
 .contact:hover, .contact:active, .contact:focus {
   background: white;
   border-top: solid 1px black;
@@ -632,6 +798,13 @@ header {
   top: 60px;
   left: 0;
   margin: 0;
+}
+
+@media screen and (min-width: 1800px) {
+  .back-btn,
+  .contact {
+    top: 100px;
+  }
 }
 
 .about__back-btn {
