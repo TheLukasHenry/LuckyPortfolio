@@ -73,3 +73,7 @@ backBtn.addEventListener('click', () => {
     projectBtn.style.display = "inline"
 })
 
+// Closing contactBtn on mobile click outside
+if (!$(event.target).closest(contact)) {
+    contact.preventDefault();
+}
