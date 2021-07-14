@@ -446,7 +446,8 @@ header {
   letter-spacing: 1px;
 
   &:hover,
-  &:active {
+  &:active,
+  &:focus {
     background: $light;
     border-top: solid 1px black;
     color: $light;
@@ -454,7 +455,8 @@ header {
     height: 45px;
   }
   &:hover .contact__icons,
-  &:active .contact__icons {
+  &:active .contact__icons,
+  &:focus .contact__icons {
     &__icon {
       transform: translateY(-75%);
       transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -527,7 +529,6 @@ header {
   padding: 0.5em 1em;
   cursor: pointer;
   color: $dark1;
-  // text-transform: uppercase;
   border: 2px solid $light;
   font-weight: 400;
   transition: 200ms ease-in-out;
