@@ -220,7 +220,7 @@ header {
   -ms-grid-columns: auto auto;
       grid-template: auto auto / auto auto;
       grid-template-areas: 'aka .' 'title title' 'desc .' 'welcome welcome';
-  margin: 5em auto 1em auto;
+  margin: 5.5em auto 1em auto;
   overflow: hidden;
   width: 270px;
 }
