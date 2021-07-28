@@ -102,8 +102,8 @@ card.innerHTML = `
     `
     
 // initial text change for google search
-card.innerHTML = `<h2 class="card__title" id="card__title">Welcome to my Portfolio</h2>
-<p class="card__description" id="card__description">I love creating websites by using HTML, CSS and JavaScript. Feel free to view my projects</p>`
+// card.innerHTML = `<h2 class="card__title" id="card__title">Welcome to my Portfolio</h2>
+// <p class="card__description" id="card__description">I love creating websites by using HTML, CSS and JavaScript. Feel free to view my projects</p>`
     
 
 // ProjectBtn card open

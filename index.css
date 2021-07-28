@@ -625,11 +625,8 @@ footer .social-list .social-list__item {
   border: 2px solid white;
   color: #003300;
   font-size: 1rem;
-  position: absolute;
-  top: 60px;
   right: 0;
   padding: 0.5em 1em;
-  margin: 0;
   cursor: pointer;
   -webkit-transition: 500ms all ease-in-out;
   transition: 500ms all ease-in-out;
@@ -793,9 +790,13 @@ footer .social-list .social-list__item {
 
 .back-btn {
   display: none;
-  position: absolute;
-  top: 60px;
   left: 0;
+}
+
+.back-btn,
+.contact {
+  position: fixed;
+  top: 60px;
   margin: 0;
 }
 
