@@ -100,15 +100,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
 card.innerHTML = `
     ${Projects[i]}
     `
+    
+// initial text change for google search
+card.innerHTML = `<h2 class="card__title" id="card__title">Welcome to my Portfolio</h2>
+<p class="card__description" id="card__description">I love creating websites by using HTML, CSS and JavaScript. Feel free to view my projects</p>`
+    
 
 // ProjectBtn card open
-
 projectBtn.addEventListener('click', () => {
     projectPagination.style.display = "block"
     card.style.display = "flex"
     title.style.display = "none"
     projectBtn.style.display = "none"
     backBtn.style.display = "inline"
+    // resume.innerHTML = ``
+    card.innerHTML = `
+    ${Projects[i]}
+    `
 })
 
 // backBtn changing page to home
@@ -120,7 +128,7 @@ backBtn.addEventListener('click', () => {
     projectBtn.style.display = "inline"
 })
 
-// Closing contactBtn on mobile click outside
+// Closing hover of contactBtn on mobile click outside
 document.addEventListener('click', () => {
 
     if (!$(event.target).closest(contact)) {

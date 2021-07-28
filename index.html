@@ -25,61 +25,64 @@
             <li class="navbar__item"><a href="about.html" class="navbar__link" id="navbar__link about">About</a></li>
         </ul>
     </nav>
-    <header>
-        <section class="title" id="title">
-            <h1 class="title__h1 text-focus-in" id="title__h1">Lucky</h1>
-            <p class="title__aka text-focus-in" id="title__aka">A.K.A. Lukas Herajt</p>
-            <p class="title__description text-focus-in" id="title__description">Web developer</p>
-            <h3 class="title__welcome text-focus-in" id="title__welcome">Welcome to my Portfolio 🤗</h3>
-        </section><br>
-
-        <div class="work-pagination" id="work-pagination">
-
-            <div class="arrows" id="arrows">
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-              </div>
-
-            <div class="arrows" id="arrows">
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-              </div>
     
+    <section class="title" id="title">
+        <h1 class="title__h1 text-focus-in" id="title__h1">Lucky</h1>
+        <p class="title__aka text-focus-in" id="title__aka">A.K.A. Lukas Herajt</p>
+        <p class="title__description text-focus-in" id="title__description">Web developer</p>
+        <h3 class="title__welcome text-focus-in" id="title__welcome">Welcome to my Portfolio 🤗</h3>
+    </section><br>
+
+    <div class="work-pagination" id="work-pagination">
+
+        <div class="arrows" id="arrows">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            </div>
+
+        <div class="arrows" id="arrows">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            </div>
+
+    </div>
+
+
+    <section class="card" id="card">
+    </section>
+
+    <button class="back-btn" id="back-btn" href="javascript:window.location.reload();"><i class="fas fa-arrow-left"></i></button>
+    <button class="contact" id="contact">
+        <div class="contact__text">
+            Contact
         </div>
-    
-    
-        <section class="card" id="card">
-        </section>
+        <div class="contact__icons">
+            <a class="contact__icons__icon" target="_blank" href="https://twitter.com/lherajt">
+                <i class="fab fa-twitter"></i>
 
-        <button class="back-btn" id="back-btn" href="javascript:window.location.reload();"><i class="fas fa-arrow-left"></i></button>
-        <button class="contact" id="contact">
-            <div class="contact__text">
-                Contact
-            </div>
-            <div class="contact__icons">
-                <a class="contact__icons__icon" target="_blank" href="https://twitter.com/lherajt">
-                    <i class="fab fa-twitter"></i>
+            </a>
+            <a class="contact__icons__icon" target="_blank" href="https://github.com/Lherajt">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="contact__icons__icon" target="_blank" href="https://www.linkedin.com/in/lukasherajt">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="contact__icons__icon" target="_blank" href="mailto:lherajt@gmail.com">
+                <i class="far fa-envelope"></i>
+            </a>
+            <a class="contact__icons__icon" target="_blank" href="tel:201-640-7892">
+                <i class="fas fa-phone"></i>
+            </a>
+        </div>
+    </button>
+    <button class="projects-btn" id="projects-btn">My Projects</button>
+    <a class="resume" id="resume" href="/img/Lucky-resume-final.pdf" target="_blank">Resume</a>
 
-                </a>
-                <a class="contact__icons__icon" target="_blank" href="https://github.com/Lherajt">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a class="contact__icons__icon" target="_blank" href="https://www.linkedin.com/in/lukasherajt">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a class="contact__icons__icon" target="_blank" href="mailto:lherajt@gmail.com">
-                    <i class="far fa-envelope"></i>
-                </a>
-                <a class="contact__icons__icon" target="_blank" href="tel:201-640-7892">
-                    <i class="fas fa-phone"></i>
-                </a>
-            </div>
-        </button>
-        <button class="projects-btn" id="projects-btn">My Projects</button>
-        <a href="/img/Lucky-resume-final.pdf" class="resume" id="resume" target="_blank">Resume</a>        
-    </header>
+    <!-- dirty solution to show resume above footer -->
+    <br><br><br><br><br>     
+    
 
 
     
@@ -115,18 +118,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="./index.js" type='text/javascript' defer></script>
-    <script type="application/ld+json">
-        {
-          "@context" : "http://schema.org",
-          "@type" : "Article",
-          "name" : "LuckyLukas Portfolio",
-          "author" : {
-            "@type" : "Person",
-            "name" : "Lukas Herajt"
-          },
-          "articleSection" : "Projects",
-          "articleBody" : "Welcome to my Portfolio. I love creating websites by using HTML, CSS and JavaScript. Feel free to view my projects."
-        }
-    </script>
+
 </body>
 </html>
