@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Open+Sans:wght@300;800&family=Roboto:wght@400;900&display=swap");
 :root {
   font-size: 1rem;
 }
@@ -12,6 +13,7 @@
 
 :root h1 {
   font-size: 5.5rem;
+  font-family: "Fredericka the Great", cursive;
 }
 
 @media screen and (min-width: 768px) {
@@ -214,7 +216,7 @@ footer .social-list .social-list__item {
   -ms-grid-rows: auto auto;
   -ms-grid-columns: auto auto;
       grid-template: auto auto / auto auto;
-      grid-template-areas: 'aka .' 'title title' 'desc .' 'welcome welcome';
+      grid-template-areas: "aka ." "title title" "desc ." "welcome welcome";
   margin: 6.5em auto 1em auto;
   overflow: hidden;
   width: 270px;
@@ -224,7 +226,7 @@ footer .social-list .social-list__item {
   .title {
     margin: 2em auto 0.8em auto;
     width: 520px;
-        grid-template-areas: 'title title' 'aka desc' 'welcome welcome';
+        grid-template-areas: "title title" "aka desc" "welcome welcome";
   }
 }
 
@@ -260,9 +262,10 @@ footer .social-list .social-list__item {
 
 .title__h1 {
   margin: 0;
-  font-family: 'Fredericka the Great', cursive;
   -webkit-animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
           animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  -webkit-animation-delay: 0.5s !important;
+          animation-delay: 0.5s !important;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -278,8 +281,8 @@ footer .social-list .social-list__item {
   color: white;
   -webkit-animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
           animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-  -webkit-animation-delay: 0.5s !important;
-          animation-delay: 0.5s !important;
+  -webkit-animation-delay: 1s !important;
+          animation-delay: 1s !important;
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
 }
@@ -315,8 +318,8 @@ footer .social-list .social-list__item {
           transform: translateY(-20px);
   -webkit-animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
           animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-  -webkit-animation-delay: 1s !important;
-          animation-delay: 1s !important;
+  -webkit-animation-delay: 1.5s !important;
+          animation-delay: 1.5s !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -346,8 +349,8 @@ footer .social-list .social-list__item {
   -ms-grid-column-span: 2;
   grid-area: welcome;
   margin: 0.5em 0 0 0;
-  -webkit-animation-delay: 1.5s !important;
-          animation-delay: 1.5s !important;
+  -webkit-animation-delay: 2s !important;
+          animation-delay: 2s !important;
 }
 
 .about-body {
@@ -456,14 +459,36 @@ footer .social-list .social-list__item {
           align-items: center;
   background-color: rgba(0, 36, 0, 0.575);
   padding: 16px;
-  width: Calc(100vw-padding);
-  max-width: 532px;
+  width: clamp(300px, 70vw, 750px);
   margin: 0 auto 3em auto;
 }
 
 .card * {
   -webkit-animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
           animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+.card .card__title {
+  margin: 0 auto;
+}
+
+.card .card__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 724px) {
+  .card .card__btns {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 @media screen and (min-width: 1800px) {
@@ -477,8 +502,14 @@ footer .social-list .social-list__item {
   position: relative;
   background-color: rgba(1, 26, 0, 0.534);
   height: 30px;
-  max-width: 532px;
-  margin: 7em auto 0 auto;
+  width: clamp(300px, 70vw, 750px);
+  margin: 90px auto 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .work-pagination {
+    margin: 50px auto 0 auto;
+  }
 }
 
 @media screen and (min-width: 1800px) {
