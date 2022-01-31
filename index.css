@@ -84,7 +84,7 @@ html * {
 }
 
 body {
-  padding: 1em;
+  padding: 1em 1em 5em 1em;
 }
 
 .navbar {
@@ -817,6 +817,7 @@ footer .social-list .social-list__item {
 .resume,
 .projects-btn {
   font-size: 1.3rem;
+  margin-top: 0.8rem;
 }
 
 .back-btn {
