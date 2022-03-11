@@ -100,8 +100,6 @@ $fs-h1-x-wide: 15rem;
   }
 }
 
-
-
 html,
 body {
   padding: 0;
@@ -236,7 +234,7 @@ footer {
   margin: 0;
   // font-family: 'Fredericka the Great', cursive;
   animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-  animation-delay: 0.5s !important;
+  animation-delay: 1s !important;
   grid-area: title;
   letter-spacing: 2px;
 }
@@ -246,7 +244,7 @@ footer {
   margin: 0 auto 0 0;
   color: white;
   animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-  animation-delay: 1s !important;
+  animation-delay: 1.5s !important;
   transform: translateY(20px);
   @media screen and (min-width: 768px) {
     transform: translateY(-40px);
@@ -264,7 +262,7 @@ footer {
   text-align: left;
   transform: translateY(-20px);
   animation: 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-  animation-delay: 1.5s !important;
+  animation-delay: 2s !important;
   @media screen and (min-width: 768px) {
     transform: translateY(-40px);
   }
@@ -279,7 +277,7 @@ footer {
 .title__welcome {
   grid-area: welcome;
   margin: 0.5em 0 0 0;
-  animation-delay: 2s !important;
+  animation-delay: 2.5s !important;
 }
 
 .about-body {
@@ -363,7 +361,6 @@ footer {
     flex-direction: column;
     @media screen and (min-width: 724px) {
       flex-direction: row;
-
     }
   }
 
@@ -378,7 +375,6 @@ footer {
   background-color: hsla(118, 100%, 5%, 0.534);
   height: 30px;
   width: clamp(300px, 70vw, 750px);
-
 
   margin: 90px auto 0 auto;
 
@@ -602,11 +598,6 @@ footer {
   font-size: 1.3rem;
   margin-top: 0.8rem;
 }
-
-// .resume {
-//   margin-bottom: 150px;
-//   overflow-y: hidden;
-// }
 
 .back-btn {
   display: none;
